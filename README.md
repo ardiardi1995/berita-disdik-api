@@ -142,24 +142,16 @@ curl http://localhost:3000/api/sources
 curl http://localhost:3000/api/stats
 ```
 
-## Automatic Scraping
+## Manual Scraping
 
-Scraping otomatis berjalan setiap hari pada:
-- **06:00 WITA** (Waktu Gowa - pagi hari)
+Scraping berita dilakukan secara manual melalui API endpoint:
 
-*Catatan: Schedule menggunakan UTC (22:00 UTC = 06:00 WITA)*
-
-Konfigurasi cron job ada di `vercel.json`:
-```json
-{
-  "crons": [
-    {
-      "path": "/api/scrape",
-      "schedule": "0 22 * * *"
-    }
-  ]
-}
+```bash
+# Trigger manual scraping
+curl https://your-api.vercel.app/api/scrape
 ```
+
+*Catatan: Cron job dihapus untuk menghemat kuota Vercel. Scraping dapat dipicu manual saat diperlukan.*
 
 ## Filter Berita Positif
 

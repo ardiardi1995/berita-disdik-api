@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
           "/api/scrape": {
             method: "GET/POST",
             description: "Trigger manual news scraping",
-            "note": "Automatically runs once daily at 6 AM Gowa time"
+            "note": "Manual scraping endpoint - trigger when needed"
           },
           "/api/sources": {
             method: "GET",
@@ -40,7 +40,7 @@ module.exports = async (req, res) => {
           }
         },
         features: [
-          "Automatic news scraping once daily",
+          "Manual news scraping via API endpoint",
           "Positive news filtering",
           "Multiple Indonesian news sources",
           "Image extraction from articles",
