@@ -108,8 +108,14 @@ vercel --prod
 ```
 
 ### 5. Konfigurasi Environment (Optional)
-Jika menggunakan database eksternal, tambahkan environment variables di Vercel dashboard:
-- `DATABASE_URL` - URL database eksternal (PlanetScale, Supabase, dll)
+**Environment Variables:**
+Tambahkan environment variable berikut di Vercel dashboard:
+- `DATABASE_URL` - PostgreSQL connection string (Neon, Supabase, dll)
+
+Contoh:
+```
+DATABASE_URL=postgresql://username:password@host:port/database?sslmode=require
+```
 
 ## Development
 
