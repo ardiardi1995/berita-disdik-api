@@ -1,4 +1,4 @@
-const Database = require('../lib/database');
+const Database = require('../lib/simple-database');
 const NewsScraper = require('../lib/scraper');
 const cors = require('cors');
 

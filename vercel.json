@@ -1,19 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/*.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/*.js": {
+      "runtime": "@vercel/node@3.0.7"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/api/index"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "source": "/",
+      "destination": "/api/index"
     }
   ]
 }

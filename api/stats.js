@@ -1,4 +1,4 @@
-const Database = require('../lib/database');
+const Database = require('../lib/simple-database');
 const cors = require('cors');
 
 // Initialize database
