@@ -1,4 +1,4 @@
-const cors = require('cors');
+import cors from 'cors';
 
 // CORS middleware
 const corsMiddleware = cors({
@@ -7,7 +7,7 @@ const corsMiddleware = cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 });
 
-module.exports = async (req, res) => {
+export default function handler(req, res) {
   corsMiddleware(req, res, async () => {
     try {
       const apiInfo = {

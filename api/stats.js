@@ -1,5 +1,5 @@
-const Database = require('../lib/postgres-database');
-const cors = require('cors');
+import Database from '../lib/postgres-database.js';
+import cors from 'cors';
 
 // Initialize database
 let db;
@@ -18,7 +18,7 @@ const corsMiddleware = cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 });
 
-module.exports = async (req, res) => {
+export default function handler(req, res) {
   corsMiddleware(req, res, async () => {
     try {
       await initDb();

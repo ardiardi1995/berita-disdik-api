@@ -1,6 +1,6 @@
-const Database = require('../lib/postgres-database');
-const NewsScraper = require('../lib/scraper');
-const cors = require('cors');
+import Database from '../lib/postgres-database.js';
+import NewsScraper from '../lib/scraper.js';
+import cors from 'cors';
 
 // Initialize database and scraper
 let db;
@@ -24,7 +24,7 @@ const corsMiddleware = cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 });
 
-module.exports = async (req, res) => {
+export default function handler(req, res) {
   // Handle CORS
   corsMiddleware(req, res, async () => {
     try {

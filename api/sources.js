@@ -1,4 +1,4 @@
-const cors = require('cors');
+import cors from 'cors';
 
 // CORS middleware
 const corsMiddleware = cors({
