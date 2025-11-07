@@ -7,7 +7,7 @@ const corsMiddleware = cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 });
 
-module.exports = async (req, res) => {
+export default function handler(req, res) {
   corsMiddleware(req, res, async () => {
     try {
       const sources = [
