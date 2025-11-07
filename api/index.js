@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
           "/api/scrape": {
             method: "GET/POST",
             description: "Trigger manual news scraping",
-            "note": "Manual scraping endpoint - trigger when needed"
+            note: "Manual scraping endpoint - trigger when needed"
           },
           "/api/sources": {
             method: "GET",
