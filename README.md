@@ -145,8 +145,9 @@ curl http://localhost:3000/api/stats
 ## Automatic Scraping
 
 Scraping otomatis berjalan setiap hari pada:
-- **06:00 WIB** (Pagi)
-- **18:00 WIB** (Sore)
+- **06:00 WITA** (Waktu Gowa - pagi hari)
+
+*Catatan: Schedule menggunakan UTC (22:00 UTC = 06:00 WITA)*
 
 Konfigurasi cron job ada di `vercel.json`:
 ```json
@@ -154,7 +155,7 @@ Konfigurasi cron job ada di `vercel.json`:
   "crons": [
     {
       "path": "/api/scrape",
-      "schedule": "0 6,18 * * *"
+      "schedule": "0 22 * * *"
     }
   ]
 }
